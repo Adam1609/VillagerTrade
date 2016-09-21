@@ -153,7 +153,7 @@ class Main extends PluginBase implements Listener{
 
 	public function openMenu(Player $player, Entity $villager){
 		$this->getVillagerConfig();
-		$villager->getLevel()->setBlockIdAt($villager->x, $villager->y, $villager->z, Block::HOPPER);
+		$villager->getLevel()->setBlockIdAt($villager->x, $villager->y, $villager->z, Block::HOPPER_BLOCK);
 		
 		$nbt = new Compound("", [new Enum("Items", []), new String("id", Tile::HOPPER), new Int("x", $villager->x), new Int("y", $villager->y), new Int("z", $villager->z)]);
 		$nbt->Items->setTagType(NBT::TAG_Compound);
